@@ -1,7 +1,6 @@
-import Cookies from "js-cookie";
+import Cookies from "js-cookie"
 
 export class TokenService {
-
     /**
      * Метод для удаления токена
      * @param name имя токена в cookies
@@ -15,15 +14,15 @@ export class TokenService {
      * @param token токен доступа
      */
     public static setAccessToken(token: string): void {
-        this.removeCookie("access_token");
-        Cookies.set("access_token", token);
+        this.removeCookie("access_token")
+        Cookies.set("access_token", token)
     }
 
     /**
      * Метод для получения токена доступа
      */
     public static getAccessToken(): string | undefined {
-        return Cookies.get("access_token");
+        return Cookies.get("access_token")
     }
 
     /**
@@ -31,14 +30,14 @@ export class TokenService {
      * @param refreshToken
      */
     public static setRefreshToken(refreshToken: string): void {
-        this.removeCookie("refresh_token");
-        Cookies.set("refresh_token", refreshToken);
+        this.removeCookie("refresh_token")
+        Cookies.set("refresh_token", refreshToken)
     }
 
     /**
      * Метод для получения токена обновления
      */
     public static getRefreshToken(): string | undefined {
-        return Cookies.get("refresh_token");
+        return Cookies.get("refresh_token")
     }
 }

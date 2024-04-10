@@ -22,7 +22,7 @@ export const useRegistrationPage = () => {
             AlertService.success("Вы успешно зарегистрировались. Теперь можете авторизоваться")
             navigate("/login")
         }
-    }, [isSuccess])
+    }, [isSuccess, navigate])
 
     useEffect(() => {
         if (registrationError && "data" in registrationError) {
@@ -32,7 +32,7 @@ export const useRegistrationPage = () => {
 
             return AlertService.error("Ошибка регистрации")
         }
-    }, [registrationError])
+    }, [registrationError, dispatch])
 
     const ChangeHandler = ({ fieldName, fieldValue }: IOnChangeEvent) => {
         setRequestData((prevState) => ({

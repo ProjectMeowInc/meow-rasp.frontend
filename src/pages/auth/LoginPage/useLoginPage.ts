@@ -36,14 +36,14 @@ export const useLoginPage = () => {
 
             return AlertService.error("Ошибка авторизации")
         }
-    }, [authorizationError])
+    }, [authorizationError, dispatch])
 
     useEffect(() => {
         if (isSuccess) {
             AlertService.success("Вы успешно авторизовались")
             navigate("/")
         }
-    }, [isSuccess])
+    }, [isSuccess, navigate])
 
     const ChangeHandler = ({ fieldName, fieldValue }: IOnChangeEvent) => {
         setRequestData((prevState) => ({
