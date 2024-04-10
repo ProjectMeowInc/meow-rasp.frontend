@@ -1,0 +1,18 @@
+.input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--blue);
+    padding-left: 5px;
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.error {
+    font-weight: 600;
+    color: red;
+}
